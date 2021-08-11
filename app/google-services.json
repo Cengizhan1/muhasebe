@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "466486110815",
+    "project_id": "cengizhan-16be3",
+    "storage_bucket": "cengizhan-16be3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466486110815:android:e11fb4a17f84f5a5dec9ea",
+        "android_client_info": {
+          "package_name": "com.cengizhan.vizyonotoboya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466486110815-h53nr9oqbnnacsud7n51dnu1b9is9f09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cengizhan.vizyonotoboya",
+            "certificate_hash": "e93d9dd8932add368a4308c10956ae3e0f7e3e03"
+          }
+        },
+        {
+          "client_id": "466486110815-huq86uh8ph7p09e9umbjm5tdrobvdb6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHCA9JmhAKFOFAS1Ln0vv7a4OJ8G0kxvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466486110815-huq86uh8ph7p09e9umbjm5tdrobvdb6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,33 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#363435"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnGoWork"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:background="@drawable/butondesign"
         android:text="İşler"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnGoOzet"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Giderler"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="318dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/butondesign"
         android:text="Özet"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoGider" />
+
+    <Button
+        android:id="@+id/btnGoGider"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/butondesign"
+
+        android:text="Giderler"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoWork" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

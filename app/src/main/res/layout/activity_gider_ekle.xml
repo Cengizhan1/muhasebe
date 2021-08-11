@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".giderEkle">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginBottom="69dp"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/spinner"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/etUcret"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGiderEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="248dp"
+        android:text="Ekle"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etAciklama"
+        app:layout_constraintTop_toBottomOf="@+id/etUcret" />
+
+    <EditText
+        android:id="@+id/etAciklama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etUcret"
+        app:layout_constraintEnd_toStartOf="@+id/etUcret"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etUcret"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="343dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etAciklama"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

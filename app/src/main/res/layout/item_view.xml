@@ -2,34 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="30dp"
+    android:background="@color/vizyonGray"
     android:gravity="center">
 
 
     <TextView
+        android:id="@+id/txtModell"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Toyata Carola"/>
+        android:text="Toyata Carola"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/txtAlıcıad"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Cengizhan Yavuz"/>
+        android:text="Cengizhan Yavuz"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/txtTeslim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="00/00/0000"/>
+        android:text="00/00/0000"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/txtUcret"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
         android:gravity="right"
         android:paddingRight="10dp"
-        android:text="1000 tl"/>
+        android:text="1000 tl"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
 
 </LinearLayout>
