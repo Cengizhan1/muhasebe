@@ -3,61 +3,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/vizyonGray"
     android:layout_height="match_parent"
     tools:context=".giderEkle">
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="223dp"
-        android:layout_marginBottom="69dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="15dp"
         android:drawSelectorOnTop="true"
         android:entries="@array/spinner"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUcret"
+        app:layout_constraintBottom_toTopOf="@+id/etAciklama"
+        app:layout_constraintEnd_toEndOf="@+id/etUcret"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnGiderEkle"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/butondesign"
         android:text="Ekle"
+        android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/etAciklama"
-        app:layout_constraintTop_toBottomOf="@+id/etUcret" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAciklama" />
 
     <EditText
         android:id="@+id/etAciklama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="126dp"
         android:ems="10"
+        android:hint="Açıklama"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etUcret"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnGiderEkle"
         app:layout_constraintEnd_toStartOf="@+id/etUcret"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <EditText
         android:id="@+id/etUcret"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="359dp"
         android:ems="10"
+        android:hint="Ücret"
         android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etAciklama"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

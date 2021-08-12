@@ -10,15 +10,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
-            android:text="Alıcı"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:text="Müşteri"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -27,8 +28,10 @@
 
         <EditText
             android:id="@+id/txtModell"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -37,14 +40,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp">
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:text="Telefon"
             android:textColor="@color/white"
             android:textSize="22sp"
@@ -54,8 +57,10 @@
 
         <EditText
             android:id="@+id/etTextPhone"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -64,14 +69,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp">
 
         <TextView
             android:id="@+id/textView111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:text="Araba modeli "
             android:textColor="@color/white"
             android:textSize="22sp"
@@ -81,8 +86,10 @@
 
         <EditText
             android:id="@+id/etEkleModel"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -92,15 +99,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp">
 
         <TextView
 
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:text="Tahmini tesim"
             android:textColor="@color/white"
             android:textSize="22sp"
@@ -110,8 +117,10 @@
 
         <EditText
             android:id="@+id/etTahminTeslim"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -120,17 +129,16 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:text="Yapılan iş "
             android:textColor="@color/white"
             android:textSize="22sp"
@@ -140,8 +148,10 @@
 
         <EditText
             android:id="@+id/etYapılanIs"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -152,14 +162,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center">
+        android:layout_height="75dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:text="Ücret "
             android:textColor="@color/white"
             android:textSize="22sp"
@@ -169,8 +179,10 @@
 
         <EditText
             android:id="@+id/etUcretWork"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="95dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white" />
@@ -179,18 +191,15 @@
     </LinearLayout>
 
 
-
-
-
-
     <Button
         android:id="@+id/btnWorkKaydet"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:background="@drawable/butondesign"
         android:text="Kaydet"
         android:textColor="@color/white"
-        android:layout_gravity="center"
         android:textSize="22sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="81dp"

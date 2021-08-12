@@ -8,8 +8,9 @@
 
     <TextView
         android:id="@+id/txtModell"
-        android:layout_width="130dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Toyata Carola"
         android:textColor="@color/white"
         android:textSize="15sp" />
@@ -18,23 +19,25 @@
         android:id="@+id/txtAlıcıad"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Cengizhan Yavuz"
         android:textColor="@color/white"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/txtTeslim"
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="00/00/0000"
         android:textColor="@color/white"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/txtUcret"
-        android:layout_width="70dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:gravity="right"
+        android:gravity="center"
         android:paddingRight="10dp"
         android:text="1000 tl"
         android:textColor="@color/white"

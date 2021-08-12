@@ -1,5 +1,6 @@
 package com.cengizhan.vizyonotoboya
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.database.FirebaseDatabase
@@ -16,6 +17,7 @@ class AddWork : AppCompatActivity() {
         btnWorkKaydet.setOnClickListener {
             val id = (0..10000).random()
 
+            var workId        = id
             var alıcıAd       = txtModell.text.toString()
             var telefon       = etTextPhone.text.toString().toLong()
             var tahminiTeslim = etTahminTeslim.text.toString()
@@ -23,7 +25,11 @@ class AddWork : AppCompatActivity() {
             var yapılanis     = etYapılanIs.text.toString()
             var ucret         = etUcretWork.text.toString().toInt()
 
-            databaseWork.child("works").child(id.toString()).setValue(workDataWrite(alıcıAd,telefon,tahminiTeslim,arabaModel,yapılanis,ucret))
+            databaseWork.child("works").child(id.toString()).setValue(workDataWrite(workId,alıcıAd,telefon,tahminiTeslim,arabaModel,yapılanis,ucret))
+
+            val intent = Intent(this,works::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

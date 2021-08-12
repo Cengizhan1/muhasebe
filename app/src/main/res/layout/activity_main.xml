@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#363435"
     android:layout_height="match_parent"
+    android:background="#363435"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnGoWork"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="180dp"
         android:background="@drawable/butondesign"
         android:text="İşler"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,13 +24,12 @@
         android:id="@+id/btnGoOzet"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/butondesign"
         android:text="Özet"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoGider" />
 
@@ -39,15 +37,28 @@
         android:id="@+id/btnGoGider"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/butondesign"
+        android:layout_marginTop="40dp"
 
+        android:background="@drawable/butondesign"
         android:text="Giderler"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoWork" />
+
+    <Button
+        android:id="@+id/btnCikis"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="40dp"
+        android:background="@drawable/butondesign"
+        android:text="çıkış"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoOzet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/vizyonikon"
         android:supportsRtl="true"
         android:theme="@style/Theme.VizyonOtoBoya">
-        <activity android:name=".giderDetails"></activity>
+        <activity
+            android:name=".workOdemee"
+            android:exported="true" />
+        <activity android:name=".giderDetails" />
         <activity android:name=".giderEkle" />
         <activity android:name=".ozet" />
         <activity android:name=".giderler" />

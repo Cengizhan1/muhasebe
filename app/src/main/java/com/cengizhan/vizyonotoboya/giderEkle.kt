@@ -1,6 +1,7 @@
 package com.cengizhan.vizyonotoboya
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
@@ -25,6 +26,10 @@ class giderEkle : AppCompatActivity(){
             var giderTarih = "2020/08/08"
 
             database.child("giderler").child(id.toString()).setValue(dataWrite(giderTürü,giderAciklama,giderUcret,giderTarih))
+
+            val i = Intent(this,giderler::class.java)
+            startActivity(i)
+            finish()
         }
     }
 }

@@ -33,7 +33,7 @@ class giderAdapter(private val giderList: ArrayList<sonGiderler>) : RecyclerView
         gTürü.text = currentGider.giderTürü
         gAciklama.text = currentGider.giderAciklama
         gTarih.text = currentGider.giderTarih
-        gUcret.text = currentGider.giderUcret.toString()
+        gUcret.text = (currentGider.giderUcret.toString()+" TL")
 
        /* holder.itemView.setOnClickListener() {
 

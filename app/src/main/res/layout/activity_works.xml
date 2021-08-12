@@ -9,12 +9,12 @@
     tools:context=".works">
 
     <TextView
-        android:layout_width="212dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:textColor="@color/white"
         android:text="Hoşgeldin Suat Yavuz"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
 
