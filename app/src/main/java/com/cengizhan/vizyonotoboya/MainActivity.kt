@@ -21,18 +21,23 @@ class MainActivity : AppCompatActivity() {
         btnGoWork.setOnClickListener{
             val intent = Intent(this,works::class.java)
             startActivity(intent)
+
         }
 
         btnGoGider.setOnClickListener{
             val intent = Intent(this,giderler::class.java)
             startActivity(intent)
+
         }
 
         btnGoOzet.setOnClickListener{
             val intent = Intent(this,ozet::class.java)
             startActivity(intent)
+
         }
+
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         getMenuInflater().inflate(R.menu.actionbardesign,menu);

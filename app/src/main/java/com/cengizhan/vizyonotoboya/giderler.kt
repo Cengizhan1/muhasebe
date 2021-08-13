@@ -3,6 +3,7 @@ package com.cengizhan.vizyonotoboya
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -32,6 +33,7 @@ class giderler : AppCompatActivity() {
         btnGoGiderEkle.setOnClickListener {
             val intent = Intent(this, giderEkle::class.java)
             startActivity(intent)
+            finish()
         }
 
 
@@ -61,5 +63,9 @@ class giderler : AppCompatActivity() {
             }
 
         })
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        getMenuInflater().inflate(R.menu.actionbardesign,menu);
+        return true;
     }
 }

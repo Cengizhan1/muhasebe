@@ -3,6 +3,7 @@ package com.cengizhan.vizyonotoboya
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_add_work.*
 
@@ -31,5 +32,15 @@ class AddWork : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+    override fun onBackPressed() {
+        val iworks = Intent(this,works::class.java)
+        startActivity(iworks)
+        finish()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        getMenuInflater().inflate(R.menu.actionbardesign,menu);
+        return true;
     }
 }

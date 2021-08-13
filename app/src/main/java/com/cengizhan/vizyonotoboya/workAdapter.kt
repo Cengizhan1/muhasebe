@@ -54,6 +54,7 @@ class workAdapter(private val workList: ArrayList<sonWorks>) : RecyclerView.Adap
 
              context.startActivity(intent)
 
+
          }
     }
 

@@ -13,12 +13,14 @@
         android:id="@+id/workDetUcret2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:text="Alınan ödeme  : "
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/workDetOdeme"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/workDetUcret" />
 
     <TextView
@@ -159,17 +161,4 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="218dp"
-        android:layout_marginBottom="19dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDetayIptal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

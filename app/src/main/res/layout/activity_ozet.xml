@@ -4,145 +4,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/vizyonGray"
     tools:context=".ozet">
 
 
-    <EditText
-        android:id="@+id/editTextNumber4"
-        android:layout_width="106dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="587dp" />
-
-    <Button
-        android:id="@+id/button7"
+    <TextView
+        android:id="@+id/txtToplamGider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="öde"
-        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Toplam gider :  1000 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetToplam" />
+
+    <TextView
+        android:id="@+id/txtOzetNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Net gelir :  1000 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtToplamGider" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
+        android:text="Gelirler"
+        android:textColor="@color/white"
+        android:textSize="23sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="584dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="rapor"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="584dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nalbur"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="104dp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toplam"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="367dp" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Diğer"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="367dp" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ev masrafı"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="314dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toplam"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="314dp" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Faturalar"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="207dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dükkan Masrafı"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="260dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toplam"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="104dp" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toplam"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="207dp" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toplam"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toplam"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
+        android:text="Giderler"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOzetOde"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="171dp"
+        android:background="@drawable/butondesign"
+        android:text="öde"
+        android:textColor="@color/white"
         android:textSize="22sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="260dp" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOzetRapor"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/butondesign"
+        android:text="rapor"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOzetOde" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txtOzetNalbur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yemek"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:text="Nalbur :  1000 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/txtOzetDiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Diğer  :  2850 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetEvMasrafı" />
+
+    <TextView
+        android:id="@+id/txtOzetDukkanMasrafi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Dükkan Masrafı :  15000 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetFatura" />
+
+    <TextView
+        android:id="@+id/txtOzetYemek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Yemek :  1500 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetNalbur" />
+
+    <TextView
+        android:id="@+id/txtOzetFatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Faturalar :  2500 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetYemek" />
+
+    <TextView
+        android:id="@+id/txtOzetEvMasrafı"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Ev masrafı :  1000 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOzetDukkanMasrafi" />
+
+    <TextView
+        android:id="@+id/txtOzetToplam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:text="Toplam gelir :  1500 TL"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

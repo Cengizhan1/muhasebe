@@ -3,6 +3,7 @@ package com.cengizhan.vizyonotoboya
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -32,12 +33,15 @@ class works : AppCompatActivity() {
         btnGoWorkAdd.setOnClickListener{
             val intent = Intent(this,AddWork::class.java)
             startActivity(intent)
+            finish()
         }
 
         workArrayList = arrayListOf<sonWorks>()
 
         getWork()
     }
+
+
 
     private fun getWork(){
         databaseWork.addValueEventListener(object: ValueEventListener {
@@ -56,5 +60,10 @@ class works : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        getMenuInflater().inflate(R.menu.actionbardesign,menu);
+        return true;
     }
 }

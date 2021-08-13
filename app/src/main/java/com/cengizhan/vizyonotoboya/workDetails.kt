@@ -3,6 +3,7 @@ package com.cengizhan.vizyonotoboya
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -31,12 +32,12 @@ class workDetails : AppCompatActivity() {
 
 
 
-        workDetAd.text = ad
-        workDetModel.text = model
-        workDetTel.text = telefon
-        workDetTeslim.text = tarih
-        workDetUcret.text = ucret.toString()
-        workDetYapılanis.text = yapılaniş
+        workDetAd.text = ("Müsteri adı :  "+ad)
+        workDetModel.text = ("Araba modeli :  "+model)
+        workDetTel.text = ("Telefon :  "+telefon)
+        workDetTeslim.text = ("Teslim tarihi :  "+tarih)
+        workDetUcret.text = ("Ücret :  "+ucret.toString()+" TL")
+        workDetYapılanis.text = ("Yapılan iş :  "+yapılaniş)
 
         btnDetayOdeme.setOnClickListener {
             val intent = Intent(this, workOdemee::class.java)
@@ -46,6 +47,7 @@ class workDetails : AppCompatActivity() {
         }
         btnDetayIptal.setOnClickListener{
             databaseOde.child("works").child(workId.toString()).removeValue()
+            databaseOde.child("workOdemeler").child(workId.toString()).removeValue()
 
             val intent = Intent(this,works::class.java)
             startActivity(intent)
@@ -61,9 +63,9 @@ class workDetails : AppCompatActivity() {
                         var odeme = i.child("odemeTutar").getValue()
                         toplam = odeme.toString().toInt() + toplam
                     }
-                    workDetOdeme.text = toplam.toString()
+                    workDetOdeme.text = (toplam.toString()+ " TL")
                     var kalan = ucret - toplam
-                    workDetKalan.text = kalan.toString()
+                    workDetKalan.text = (kalan.toString() + " TL")
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -74,5 +76,14 @@ class workDetails : AppCompatActivity() {
 
 
 
+    }
+    override fun onBackPressed() {
+        val iworks = Intent(this,works::class.java)
+        startActivity(iworks)
+        finish()
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        getMenuInflater().inflate(R.menu.actionbardesign,menu);
+        return true;
     }
 }
