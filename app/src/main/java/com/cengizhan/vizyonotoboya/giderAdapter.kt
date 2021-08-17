@@ -35,17 +35,28 @@ class giderAdapter(private val giderList: ArrayList<sonGiderler>) : RecyclerView
         gTarih.text = currentGider.giderTarih
         gUcret.text = (currentGider.giderUcret.toString()+" TL")
 
-       /* holder.itemView.setOnClickListener() {
+        val giderTürü = currentGider.giderTürü
+        val giderAciklama = currentGider.giderAciklama
+        val giderUcret = currentGider.giderUcret
+        val giderTarih = currentGider.giderTarih
+        val giderControl = currentGider.giderControl
+        val giderId = currentGider.giderId
+
+        holder.itemView.setOnClickListener() {
 
 
-            val it_mDetails= Intent(context,DetailsActivity::class.java)
-            it_mDetails.putExtra("it_movieName",movieName)
-            it_mDetails.putExtra("it_movieRating",movieRating.toString())
-            it_mDetails.putExtra("it_movieDetail",movieDetails)
-            it_mDetails.putExtra("it_movieImage",movieImage)
-            context.startActivity(it_mDetails)
+            val intent= Intent(context,giderDetails::class.java)
+            intent.putExtra("keygiderTürü",giderTürü)
+            intent.putExtra("keyGiderId",giderId)
+            intent.putExtra("keygiderAciklama",giderAciklama)
+            intent.putExtra("keygiderUcret",giderUcret)
+            intent.putExtra("keygiderTarih",giderTarih)
+            intent.putExtra("giderControl",giderControl)
 
-        }*/    }
+            context.startActivity(intent)
+
+
+        }    }
 
     override fun getItemCount(): Int = giderList.size
 

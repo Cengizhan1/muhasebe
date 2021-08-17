@@ -39,18 +39,22 @@ class workAdapter(private val workList: ArrayList<sonWorks>) : RecyclerView.Adap
         val wTelefon = currentWork.telefon.toString()
         val wYapılanis = currentWork.yapılanis.toString()
         val uc = currentWork.ucret
+        val t = currentWork.workTarih
+        val control = currentWork.control
 
          holder.itemView.setOnClickListener() {
 
 
              val intent= Intent(context,workDetails::class.java)
              intent.putExtra("keyTelefon",wTelefon)
+             intent.putExtra("keyControl",control)
              intent.putExtra("keyId",wId)
              intent.putExtra("keyYapılaniş",wYapılanis)
              intent.putExtra("keyAd",wAd.text)
              intent.putExtra("keyModel",wModel.text)
              intent.putExtra("keyTeslim",wTeslim.text)
              intent.putExtra("keyUcret",uc)
+             intent.putExtra("keyTarih",t)
 
              context.startActivity(intent)
 

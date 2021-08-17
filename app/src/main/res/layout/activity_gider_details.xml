@@ -4,13 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".giderDetails">
+    android:background="@color/vizyonGray"
+    tools:context=".giderDetails"
+    tools:layout_editor_absoluteY="81dp">
+
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/btnGiderTürü"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nalbur"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="96dp" />
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="130dp"
+        android:text="Gider türü :  "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnGiderAciklama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:text="Gider açıklama :  "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiderTürü" />
+
+    <TextView
+        android:id="@+id/btnGiderUc5et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:text="Gider ücret :  "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiderAciklama" />
+
+    <TextView
+        android:id="@+id/btnGiderOdeme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="35dp"
+        android:text="Gider ödeme :  "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giderOlusturmaTarihi" />
+
+    <TextView
+        android:id="@+id/btnGiderKalan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:text="Gider kalan :  "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiderOdeme" />
+
+    <TextView
+        android:id="@+id/giderOlusturmaTarihi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Oluşturulma tarihi :  08/08/2020  19:35"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGiderOdemeEkle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/butondesign"
+        android:text="Ödeme ekle"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiderKalan" />
+
+    <Button
+        android:id="@+id/btnGiderİptal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/butondesign"
+        android:text="Gider iptal"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiderOdemeEkle" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

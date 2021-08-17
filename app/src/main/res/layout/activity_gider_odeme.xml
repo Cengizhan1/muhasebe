@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/vizyonGray"
-    tools:context=".workOdemee">
+    android:layout_height="match_parent"
+    tools:context=".giderOdeme">
 
     <Button
-        android:id="@+id/btnOde"
+        android:id="@+id/btnGiderOde"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="230dp"
@@ -18,11 +18,10 @@
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workOdenecekTutar" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView111"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
@@ -31,13 +30,13 @@
         android:text="Lütfen ödeme yapmak istediğiniz tutarı girin"
         android:textColor="@color/white"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/workOdenecekTutar"
+        app:layout_constraintBottom_toTopOf="@+id/giderOdenecekTutar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/workOdenecekTutar"
+        android:id="@+id/giderOdenecekTutar"
         android:layout_width="135dp"
         android:layout_height="0dp"
         android:layout_marginBottom="50dp"
@@ -45,8 +44,9 @@
         android:inputType="number"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnOde"
+        app:layout_constraintBottom_toTopOf="@+id/btnGiderOde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView111" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

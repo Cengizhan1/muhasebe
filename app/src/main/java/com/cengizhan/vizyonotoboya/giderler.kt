@@ -50,9 +50,13 @@ class giderler : AppCompatActivity() {
         database.addValueEventListener(object:ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
-                    for (gider in snapshot.children){
-                        val g = gider.getValue(sonGiderler::class.java)
-                        giderArrayList.add(g!!)
+
+                    for (gider in snapshot.children) {
+                        val c = gider.child("giderControl").getValue()
+                        if (c == true) {
+                            val g = gider.getValue(sonGiderler::class.java)
+                            giderArrayList.add(g!!)
+                        }
                     }
                     giderRecycler.adapter = giderAdapter(giderArrayList)
                 }
@@ -67,5 +71,11 @@ class giderler : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         getMenuInflater().inflate(R.menu.actionbardesign,menu);
         return true;
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

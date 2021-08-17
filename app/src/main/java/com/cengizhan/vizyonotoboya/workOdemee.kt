@@ -6,22 +6,33 @@ import android.os.Bundle
 import android.view.Menu
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_work_odemee.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class workOdemee : AppCompatActivity() {
+    var countOdemeWork:Long =0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_work_odemee)
 
         var databaseOde = FirebaseDatabase.getInstance().reference
+
+
+        databaseOde.child("worksOdemeler").get().addOnSuccessListener{
+            countOdemeWork = it.childrenCount
+        }
         btnOde.setOnClickListener {
             var workId = intent.getIntExtra("keyOde",0)
-            var odemeId = (0..10000).random()
+            var odemeId = countOdemeWork + 1
             var odemeTutar = workOdenecekTutar.text.toString().toInt()
-            var odemeTarih = "2020/08/08"
+            val form = SimpleDateFormat("dd-MM-yyyy HH:mm")
+            val tarih = Date()
+            val odemeTarih = form.format(tarih).toString()
 
             databaseOde.child("workOdemeler").child(workId.toString()).child(odemeId.toString())
-                .setValue(odemeDataWrite(workId, odemeTutar, odemeId, odemeTarih))
+                .setValue(odemeDataWrite(workId, odemeTutar, odemeId.toInt(), odemeTarih))
 
             val intent = Intent(this,works::class.java)
             startActivity(intent)

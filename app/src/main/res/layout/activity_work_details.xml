@@ -13,61 +13,58 @@
         android:id="@+id/workDetUcret2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="120dp"
         android:text="Alınan ödeme  : "
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/workDetOdeme"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workDetUcret" />
-
-    <TextView
-        android:id="@+id/workDetKalan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:text="00 tl"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/workDetUcret4" />
-
-    <TextView
-        android:id="@+id/workDetUcret4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:text="Kalan ücret  : "
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/workDetKalan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workDetUcret2" />
+        app:layout_constraintTop_toTopOf="@+id/workDetOdeme" />
 
     <TextView
         android:id="@+id/workDetOdeme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="30dp"
         android:text="00 tl"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/workDetUcret2" />
+        app:layout_constraintTop_toBottomOf="@+id/workDetTarih" />
+
+    <TextView
+        android:id="@+id/workDetUcret4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="8dp"
+        android:text="Kalan ücret      :"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workDetUcret2" />
+
+    <TextView
+        android:id="@+id/workDetKalan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="00 tl"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workDetOdeme" />
 
     <TextView
         android:id="@+id/workDetAd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="80dp"
         android:text="Alıcı ad"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,47 +75,31 @@
         android:layout_marginTop="10dp"
         android:text="Telefon no"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workDetAd"
         app:layout_constraintTop_toBottomOf="@+id/workDetAd" />
 
     <TextView
         android:id="@+id/workDetUcret"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:text="Ücret"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workDetYapılanis"
         app:layout_constraintTop_toBottomOf="@+id/workDetYapılanis" />
 
     <TextView
         android:id="@+id/workDetTeslim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:text="Tahmini teslim"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workDetModel"
         app:layout_constraintTop_toBottomOf="@+id/workDetModel" />
-
-    <TextView
-        android:id="@+id/workDetModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Araba model"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/workDetTeslim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workDetTel" />
 
     <TextView
         android:id="@+id/workDetYapılanis"
@@ -127,38 +108,59 @@
         android:layout_marginTop="10dp"
         android:text="Yapılan iş"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workDetTeslim"
         app:layout_constraintTop_toBottomOf="@+id/workDetTeslim" />
+
+    <TextView
+        android:id="@+id/workDetModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Araba model"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workDetTel"
+        app:layout_constraintTop_toBottomOf="@+id/workDetTel" />
 
     <Button
         android:id="@+id/btnDetayOdeme"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="19dp"
         android:background="@drawable/butondesign"
         android:text="Ödeme ekle"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnDetayIptal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workDetUcret" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnDetayIptal"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/butondesign"
         android:text="İşi iptal et"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/workDetTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Oluşturulma tarihi :  08/08/2020 16/30"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

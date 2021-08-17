@@ -59,32 +59,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnOzetOde"
+        android:id="@+id/btnOzetRapor"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="171dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/butondesign"
-        android:text="öde"
+        android:text="rapor"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnOzetRapor"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/butondesign"
-        android:text="rapor"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOzetOde" />
 
     <TextView
         android:id="@+id/txtOzetNalbur"

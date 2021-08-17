@@ -48,8 +48,11 @@ class works : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     for (work in snapshot.children){
-                        val w = work.getValue(sonWorks::class.java)
-                        workArrayList.add(w!!)
+                        val c = work.child("control").getValue()
+                        if(c==true) {
+                            val w = work.getValue(sonWorks::class.java)
+                            workArrayList.add(w!!)
+                        }
                     }
                     workRecycler.adapter = workAdapter(workArrayList)
                 }
@@ -60,6 +63,33 @@ class works : AppCompatActivity() {
             }
 
         })
+    }
+    private fun geyDelWork(){
+        databaseWork.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()){
+                    for (work in snapshot.children){
+                        val c = work.child("control").getValue()
+                        if(c==false) {
+                            val w = work.getValue(sonWorks::class.java)
+                            workArrayList.add(w!!)
+                        }
+                    }
+                    workRecycler.adapter = workAdapter(workArrayList)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

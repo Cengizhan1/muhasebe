@@ -17,7 +17,7 @@ class workDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_work_details)
 
-        //getData()
+
 
         var databaseOde = FirebaseDatabase.getInstance().reference
 
@@ -29,6 +29,8 @@ class workDetails : AppCompatActivity() {
         val model=intent.getStringExtra("keyModel")
         val ad=intent.getStringExtra("keyAd")
         val tarih=intent.getStringExtra("keyTeslim")
+        val oluşTarihi=intent.getStringExtra("keyTarih")
+        val control = intent.getBooleanExtra("keyControl",true)
 
 
 
@@ -38,6 +40,7 @@ class workDetails : AppCompatActivity() {
         workDetTeslim.text = ("Teslim tarihi :  "+tarih)
         workDetUcret.text = ("Ücret :  "+ucret.toString()+" TL")
         workDetYapılanis.text = ("Yapılan iş :  "+yapılaniş)
+        workDetTarih.text = ("Oluşturulma tarihi : "+oluşTarihi)
 
         btnDetayOdeme.setOnClickListener {
             val intent = Intent(this, workOdemee::class.java)
@@ -46,8 +49,13 @@ class workDetails : AppCompatActivity() {
             finish()
         }
         btnDetayIptal.setOnClickListener{
-            databaseOde.child("works").child(workId.toString()).removeValue()
-            databaseOde.child("workOdemeler").child(workId.toString()).removeValue()
+
+            val updateGider = mapOf<String,Boolean>(
+                "control" to false
+            )
+
+            databaseOde.child("works").child(workId.toString()).updateChildren(updateGider)
+            //databaseOde.child("workOdemeler").child(workId.toString()).removeValue()
 
             val intent = Intent(this,works::class.java)
             startActivity(intent)

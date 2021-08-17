@@ -7,6 +7,8 @@ import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_gider_ekle.*
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.random.Random
 
 class giderEkle : AppCompatActivity(){
@@ -16,17 +18,24 @@ class giderEkle : AppCompatActivity(){
         setContentView(R.layout.activity_gider_ekle)
 
         var database = FirebaseDatabase.getInstance().reference
+        var countGider:Long = 0
 
-
+        database.child("giderler").get().addOnSuccessListener{
+            countGider = it.childrenCount
+        }
         btnGiderEkle.setOnClickListener {
-            val giderId = (0..10000).random()
+            val form = SimpleDateFormat("dd-MM-yyyy HH:mm")
+            val tarih = Date()
+
+            val giderId = countGider+1
 
             var giderTürü = spinner.selectedItem.toString()
+            var giderControl = true
             var giderAciklama = etAciklama.text.toString()
             var giderUcret = etUcret.text.toString().toInt()
-            var giderTarih = "2020/08/08"
+            var giderTarih = form.format(tarih).toString()
 
-            database.child("giderler").child(giderId.toString()).setValue(dataWrite(giderId,giderTürü,giderAciklama,giderUcret,giderTarih))
+            database.child("giderler").child(giderId.toString()).setValue(dataWrite(giderId,giderControl,giderTürü,giderAciklama,giderUcret,giderTarih))
 
             val i = Intent(this,giderler::class.java)
             startActivity(i)
